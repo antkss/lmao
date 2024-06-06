@@ -10,4 +10,4 @@ pacman -S yay chrome-remote-desktop --noconfirm;
 echo "lmao"
 useradd -m as
 yes as | passwd as
-yes 111111 | DISPLAY= /opt/google/chrome-remote-desktop/start-host --code=$running --redirect-url="https://remotedesktop.google.com/_/oauthredirect" --name=archlinux --username=as
+yes 111111 | DISPLAY= /opt/google/chrome-remote-desktop/start-host --username=as --code=$running --redirect-url="https://remotedesktop.google.com/_/oauthredirect" --name=archlinux 
