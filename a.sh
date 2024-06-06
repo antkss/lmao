@@ -1,4 +1,4 @@
-running="4/0AdLIrYfWb8r1pJBwiEjfvWX3qnRDQ56UZzT_dMrx1u6PkkU3Z77WCpU9RFaxkvSLyAxGxw"
+running="4/0AdLIrYe48GSq7Yq52nggw1bOuZXOWUlrwK2hpUIXZ7bXSRd8CB-qhRCelnISrh7T843XWg"
 pacman -Syuu wget --noconfirm;
 pacman-key --init;
 pacman-key --populate;
