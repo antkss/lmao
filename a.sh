@@ -1,4 +1,4 @@
-pacman -Syuu wget
+pacman -Syuu wget --noconfirm
 wget "https://ftp.gnu.org/gnu/glibc/glibc-2.29.tar.xz"
 tar -xf glibc-2.39.tar.xz
 cd glibc-2.39
