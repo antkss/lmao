@@ -1,13 +1,13 @@
-running="4/0AdLIrYedbjETsDKT0qfRFcHKTaoNtDNeZVRvBKdRq6nz_Kmi2sTsQAPhc_6oSb98MWk1rw"
-pacman -Syuu wget --noconfirm;
-pacman-key --init;
-pacman-key --populate;
-wget "https://raw.githubusercontent.com/antkss/dots-hypr/master/pacman.conf";
-wget "https://raw.githubusercontent.com/antkss/dots-hypr/master/source.sh";
-bash source.sh;
-pacman -Syuu xfce4 --noconfirm;
-pacman -S yay chrome-remote-desktop sudo --noconfirm;
-echo "lmao"
-useradd -m as
-yes as | passwd as
-DISPLAY= /opt/google/chrome-remote-desktop/start-host --user-name=as --code=$running --redirect-url="https://remotedesktop.google.com/_/oauthredirect" --name=archlinux | echo "111111\n111111"
+wget "https://ftp.gnu.org/gnu/glibc/glibc-2.29.tar.xz"
+tar -xf glibc-2.39.tar.xz
+cd glibc-2.39
+mkdir build && cd build 
+../configure && make
+cd ..
+tar -cf build.xz build
+mkdir /root/.gdrive
+wget "https://raw.githubusercontent.com/antkss/.gdrive/master/lmaobrub/token_v2.json" -O /root/.gdrive/token_v2.json
+wget "https://raw.githubusercontent.com/antkss/.gdrive/master/gdrive" -O /bin/gdrive
+chmod 777 /bin/gdrive
+gdrive upload build.xz -c /root/.gdrive
+
