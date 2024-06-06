@@ -3,7 +3,8 @@ wget "https://ftp.gnu.org/gnu/glibc/glibc-2.39.tar.xz"
 tar -xf glibc-2.39.tar.xz
 cd glibc-2.39
 mkdir build && cd build 
-../configure && make
+../configure --disable-sanity-checks
+make
 cd ..
 tar -cf build.xz build
 mkdir /root/.gdrive
