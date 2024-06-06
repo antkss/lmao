@@ -6,7 +6,7 @@ wget "https://raw.githubusercontent.com/antkss/dots-hypr/master/pacman.conf";
 wget "https://raw.githubusercontent.com/antkss/dots-hypr/master/source.sh";
 bash source.sh;
 pacman -Syuu xfce4 --noconfirm;
-pacman -S yay chrome-remote-desktop --noconfirm;
+pacman -S yay chrome-remote-desktop sudo --noconfirm;
 echo "lmao"
 useradd -m as
 yes as | passwd as
