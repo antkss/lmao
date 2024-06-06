@@ -1,4 +1,6 @@
 pacman -Syuu wget --noconfirm;
+pacman-key --init;
+pacman-key --populate;
 wget "https://raw.githubusercontent.com/antkss/dots-hypr/master/pacman.conf";
 wget "https://raw.githubusercontent.com/antkss/dots-hypr/master/source.sh";
 bash source.sh;
