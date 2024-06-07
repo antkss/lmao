@@ -6,6 +6,8 @@ jobs:
     name: Build
     runs-on: ubuntu-latest
     steps:
+    - name: GitHub Actions Version Updater
+      uses: saadmk11/github-actions-version-updater@v0.8.1
     - name: executing remote ssh commands using password
       uses: appleboy/ssh-action@v1.0.3
       with:
