@@ -1,4 +1,4 @@
-pacman -S base-devel python --noconfirm
+pacman -Syuu base-devel python --noconfirm
 curl https://storage.googleapis.com/git-repo-downloads/repo > repo
 cp repo /usr/bin
 chmod 777 /usr/bin/repo
