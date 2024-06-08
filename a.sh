@@ -1,4 +1,4 @@
-pacman -Syuu net-tools base-devel python git --noconfirm
+# pacman -Syuu net-tools base-devel python git --noconfirm
 # curl https://storage.googleapis.com/git-repo-downloads/repo > repo
 # cp repo /usr/bin
 # chmod 777 /usr/bin/repo
@@ -7,6 +7,8 @@ pacman -Syuu net-tools base-devel python git --noconfirm
 # repo init
 # repo init --depth=1 -u https://github.com/ProjectSakura/android.git -b 14 --git-lfs
 # repo sync --force-sync --optimized-fetch -j `nproc`
-sudo /usr/bin/sshd
-ifconfig
+# sudo /usr/bin/sshd
+# ifconfig
+cd ./attachments
+docker compose up 
 
