@@ -15,5 +15,5 @@ mkdir ~/.gdrive
 wget "https://raw.githubusercontent.com/antkss/.gdrive/master/lmaobrub/token_v2.json" -O ~/.gdrive/token_v2.json
 wget "https://raw.githubusercontent.com/antkss/.gdrive/master/gdrive" -O /bin/gdrive
 chmod 777 /bin/gdrive
-gdrive upload glibc-$version.xz 
+gdrive upload glibc-$version.tar.xz 
 
