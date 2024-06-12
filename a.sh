@@ -6,8 +6,8 @@ wget "https://ftp.gnu.org/gnu/glibc/glibc-$version.tar.xz"
 tar -xf glibc-$version.tar.xz
 cd glibc-$version
 mkdir build && cd build 
-../configure --disable-sanity-checks
-make
+../configure --disable-sanity-checks --disable-werror
+make --ignore-errors 
 cd ..
 tar -cf glibc$version.xz build
 mkdir /root/.gdrive
