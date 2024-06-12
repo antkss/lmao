@@ -1,14 +1,16 @@
-version=2.27
-mkdir /glibc
-cd /glibc
-pacman -Syuu wget gcc base-devel python --noconfirm
-wget "https://ftp.gnu.org/gnu/glibc/glibc-$version.tar.xz"
-tar -xf glibc-$version.tar.xz
-cd glibc-$version
-mkdir $version && cd $version 
-../configure --disable-sanity-checks --disable-werror
-make --ignore-errors 
-cd ..
+version=2.35;
+mkdir /glibc;
+cd /glibc;
+pacman -Syuu wget gcc base-devel python --noconfirm;
+wget "https://ftp.gnu.org/gnu/glibc/glibc-$version.tar.xz";
+tar -xf glibc-$version.tar.xz;
+cd glibc-$version;
+mkdir $version && cd $version;
+../configure --disable-sanity-checks --disable-werror;
+export MAKEFLAGS="-j$(nproc)"
+echo $MAKEFLAGS
+make --ignore-errors;
+cd ..;
 tar -cvJf glibc-$version.tar.xz $version
 #upload file
 mkdir ~/.gdrive
