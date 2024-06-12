@@ -1,4 +1,4 @@
-version=2.35;
+version=2.38;
 mkdir /glibc;
 cd /glibc;
 pacman -Syuu wget gcc base-devel python --noconfirm;
@@ -8,6 +8,7 @@ cd glibc-$version;
 mkdir $version && cd $version;
 ../configure --disable-sanity-checks --disable-werror;
 export MAKEFLAGS="-j$(nproc)"
+echo "makeflag configuration: "
 echo $MAKEFLAGS
 make --ignore-errors;
 cd ..;
