@@ -1,3 +1,5 @@
+#install packages
+pacman -Sy base-devel git --noconfirm
 git clone https://github.com/antkss/packages
 for i in $(find . -name "*pkg.tar*");do
     mv $i packages
