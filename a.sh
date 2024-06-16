@@ -1,4 +1,4 @@
-version=2.34;
+version=2.37;
 mkdir /glibc;
 cd /glibc;
 pacman -Syuu wget gcc base-devel python --noconfirm;
