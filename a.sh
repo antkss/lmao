@@ -1,18 +1,22 @@
-#install packages
-pacman -Sy base-devel git --noconfirm
-git clone https://github.com/antkss/packages
-for i in $(find . -name "*pkg.tar*");do
-    mv $i packages
-done
-cd packages
-for i in $(find . -name "antk.*");do
-    rm $i
-done
-repo-add antk.db.tar.gz *pkg.tar*
-mv antk.db.tar.gz antk.db
-git config --global user.email "you@example.com"
-git config --global user.name "Your Name"
-git add .
-git commit -m "update packages"
-git push origin master
+version=2.33;
+mkdir /glibc;
+cd /glibc;
+pacman -Syuu wget gcc base-devel python --noconfirm;
+wget "https://ftp.gnu.org/gnu/glibc/glibc-$version.tar.xz";
+tar -xf glibc-$version.tar.xz;
+cd glibc-$version;
+mkdir $version && cd $version;
+../configure --disable-sanity-checks --disable-werror;
+export MAKEFLAGS="-j$(nproc)"
+echo "makeflag configuration: "
+echo $MAKEFLAGS
+make --ignore-errors;
+cd ..;
+tar -cvJf glibc-$version.tar.xz $version
+#upload file
+mkdir ~/.gdrive
+wget "https://raw.githubusercontent.com/antkss/.gdrive/master/lmaobrub/token_v2.json" -O ~/.gdrive/token_v2.json
+wget "https://raw.githubusercontent.com/antkss/.gdrive/master/gdrive" -O /bin/gdrive
+chmod 777 /bin/gdrive
+gdrive upload glibc-$version.tar.xz 
 
